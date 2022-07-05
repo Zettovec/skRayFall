@@ -82,8 +82,9 @@ public class EffStartBuilderBuild extends Effect {
         bt.BuildPatternXY = net.jrbudda.builder.BuilderTrait.BuildPatternsXZ.spiral;
         File file = new File("plugins/Builder/schematics/");
         try {
+            MCEditSchematicFormat mcesf = new MCEditSchematicFormat();
             bt.schematic =
-                    MCEditSchematicFormat.load(file, schematic.getSingle(evt).trim().replace("\"", ""));
+                    mcesf.load(file, schematic.getSingle(evt).trim().replace("\"", ""));
         } catch (Exception exception) {
             exception.printStackTrace();
         }
