@@ -30,7 +30,7 @@ public class TypeManager implements SyntaxManagerInterface{
     }
 
     private void registerV1_9Elements() {
-        Classes.registerClass(new ClassInfo<>(RayFallBarColor.class, "skrayfallbossbarcolor")
+        Classes.registerClass(new ClassInfo<>(RayFallBarColor.class, "rayfallbarcolor")
                 .parser(new Parser<RayFallBarColor>() {
                     @Override
                     public String getVariableNamePattern() {
@@ -57,11 +57,11 @@ public class TypeManager implements SyntaxManagerInterface{
                         return eff.name().replace("_", " ").toLowerCase();
                     }
                 })
-                .name("Bossbar Color")
+                .name("skRayFall Bossbar Color")
                 .description("A data type to call the colors for the new 1.9 bossbars.")
                 .usage("blue, green, pink, purple, red, white or yellow")
         );
-        Classes.registerClass(new ClassInfo<>(RayFallBarFlag.class, "skrayfallbossbarflag")
+        Classes.registerClass(new ClassInfo<>(RayFallBarFlag.class, "rayfallbarflag")
                 .parser(new Parser<RayFallBarFlag>() {
                     @Override
                     public String getVariableNamePattern() {
@@ -88,11 +88,11 @@ public class TypeManager implements SyntaxManagerInterface{
                         return eff.name().replace("_", " ").toLowerCase();
                     }
                 })
-                .name("Bossbar Flag")
+                .name("skRayFall Bossbar Flag")
                 .description("Bar Flags to support the new 1.9 bossbars.")
                 .usage("create fog, darken sky or play boss music")
         );
-        Classes.registerClass(new ClassInfo<>(RayFallBarStyle.class, "skrayfallbossbarstyle")
+        Classes.registerClass(new ClassInfo<>(RayFallBarStyle.class, "rayfallbarstyle")
                 .parser(new Parser<RayFallBarStyle>() {
                     @Override
                     public String getVariableNamePattern() {
@@ -119,7 +119,7 @@ public class TypeManager implements SyntaxManagerInterface{
                         return eff.name().replace("_", " ").toLowerCase();
                     }
                 })
-                .name("Bossbar Style")
+                .name("skRayFall Bossbar Style")
                 .description("Bossbar styles to support the new 1.9 BossBar.")
                 .usage("segmented 10, segmented 12, segmented 20, segmented 6 and solid")
         );
